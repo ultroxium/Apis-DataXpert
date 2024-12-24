@@ -15,6 +15,7 @@ class UserModel(Base):
     is_active = Column(Boolean, default=True)
     is_verified = Column(Boolean, default=False)
     google_id = Column(String(100),unique=True)
+    github_id = Column(String(100),unique=True)
     picture = Column(String(255), nullable=True)
     verified_at = Column(DateTime, nullable=True, default=None)
     registered_at = Column(DateTime, nullable=True, default=None)

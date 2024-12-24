@@ -127,7 +127,7 @@ class B2FileManager:
 
 
 # class B2FileManager:
-    # def __init__(self, use_b2=False, local_dir='/workspaces/Predictify-BE/static/'):
+    # def __init__(self, use_b2=False, local_dir='/static/'):
     #     self.use_b2 = use_b2
     #     self.local_dir = os.path.abspath(local_dir)
     #     if not self.use_b2:

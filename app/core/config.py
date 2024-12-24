@@ -24,6 +24,9 @@ class Settings(BaseSettings):
     BUCKET_NAME: str =os.getenv("BUCKET_NAME")
     GENAI_API_KEY: str = os.getenv("GENAI_API_KEY")
 
+    GITHUB_CLIENT_ID: str=os.getenv("GITHUB_CLIENT_ID")
+    GITHUB_CLIENT_SECRET: str=os.getenv("GITHUB_CLIENT_SECRET")
+
     class Config:
         env_file = ".env"
 

@@ -21,11 +21,7 @@ scheduler = BackgroundScheduler()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "*", 
-        # "http://localhost:3000", 
-        # "https://predict-ify-test.vercel.app",
-        # "https://www.predictify-be.onrender.com",
-        
+        "*",         
     ],
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
