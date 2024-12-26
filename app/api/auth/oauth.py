@@ -82,7 +82,7 @@ async def auth_callback(request: Request, db: Session = Depends(get_db)):
     if not subscription:
         subscription_obj = SubscriptionModel(
         user_id = user.id,
-        plan_id =1,
+        plan_id =2,
         )
         db.add(subscription_obj)
         db.commit()
@@ -102,7 +102,7 @@ async def auth_callback(request: Request, db: Session = Depends(get_db)):
         data={"id":user.id,"sub": user.email}, expires_delta=access_token_expires
     )
 
-    redirect_url = f"{settings.FRONTEND_URL}/login?token={access_token}"
+    redirect_url = f"{settings.FRONTEND_URL}/dashboard?token={access_token}"
     return RedirectResponse(url=redirect_url)
 
 @router.get('/logout')
@@ -121,5 +121,5 @@ async def logout(request: Request):
         # Clear session data
         request.session.clear()  # This clears all session data
     
-    return RedirectResponse(url='https://www.dataxpert.vercel.app/login')
+    return RedirectResponse(url='https://www.dataxpert.vercel.app')
 
